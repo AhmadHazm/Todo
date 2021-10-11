@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css">
     <script src="./js/background.js" defer></script>
     <script src="./js/app.js" defer></script>
@@ -11,5 +14,32 @@
 </head>
 <body>
     <canvas></canvas>
+    <header>
+        <h1>TODO</h1>
+    </header>
+    <main>
+        <input type="text" name="creteTodo" id="creteTodo" placeholder="Create a new todo...">
+        <ul id="todosContainer">
+            <li class="todo">
+                <input type="checkbox" name="checkbox" class="todoCheckbox">
+                <p class="todoText">Create todo list for the day!</p>
+                <div class="removeTodoBtn"></div>
+            </li>
+        </ul>
+        
+        <article id="todosInfo">
+            <h2>
+                <span id="leftTodosNum">1</span> 
+                left
+            </h2>
+            <button class="bt clearCompletedBtn" onclick="clearCompleted()">Clear Completed</button>
+        </article>
+        
+        <div id="filterTodos">
+            <button class="bt filterBtn" onclick="filter('all')">All</button>
+            <button class="bt filterBtn" onclick="filter('active')">Active</button>
+            <button class="bt filterBtn" onclick="filter('completed')">Completed</button>
+        </div>
+    </main>
 </body>
 </html>

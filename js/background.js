@@ -85,8 +85,7 @@ function init(particelsNum){
 
 function animate(){
     requestAnimationFrame(animate)
-    ctx.fillStyle = "rgb(0, 0, 0, .3)"
-    ctx.fillRect(0, 0, canvas.width, canvas.height)
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
     particlesArr.forEach(part=>{
         part.update()
         connect()
