@@ -40,7 +40,7 @@ main{
     height: fit-content;
     margin: auto;
 }
-#creteTodo{
+#createTodo{
     font-family: 'Josefin Sans', sans-serif;
     background-color: var(--element);
     color: var(--white);
@@ -51,7 +51,7 @@ main{
     width: 100%;
     padding: .3em 1em;
 }
-#todosContainer{
+#todosList{
     margin-top: 1em;
     display: grid;
     width: calc(100% + 2.3em);
@@ -64,6 +64,7 @@ main{
     width: 100%;
     background-color: transparent;
     padding: .5em 0;
+    list-style: none;
 }
 .todo::after{
     content: "";
@@ -113,7 +114,6 @@ main{
 }
 #todosInfo h2{
     position: absolute;
-    width: 100%;
     font-size: 1rem;
     top: .3em;
 }
