@@ -1,11 +1,16 @@
+:root{
+    --background: hsl(235, 21%, 11%);
+    --element: hsl(235, 24%, 19%);
+    --white: hsl(0, 0%, 100%);
+}
 *{
     margin: 0;
     padding: 0;
 }
 body{
-    background-color: black;
-    color: white;
+    background-color: var(--background);
     font-family: 'Josefin Sans', sans-serif;
+    color: var(--white);
 }
 canvas{
     position: absolute;
@@ -13,8 +18,70 @@ canvas{
 }
 /* header */
 header{
+    display: flex;
     text-align: center;
+    height: 8em;
 }
 h1{
     font-size: 2.5rem;
+    margin: auto;
+}
+
+/* main */
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    max-width: 35em;
+    height: fit-content;
+    margin: auto;
+}
+#creteTodo{
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: var(--element);
+    color: var(--white);
+    border: 1px solid var(--white);
+    border-radius: .1em;
+    font-size: 1.1rem;
+    font-weight: 600;
+    width: 100%;
+    padding: .3em 1em;
+}
+#todosContainer{
+    margin-top: 1em;
+    display: grid;
+    width: calc(100% + 2.3em);
+    height: fit-content;
+}
+.todo{
+    position: relative;
+    display: flex;
+    gap: 2em;
+    width: 100%;
+    background-color: transparent;
+    padding: .5em 0;
+}
+.todo::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    background-color: var(--white);
+}
+.removeTodoBtn{
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    right: 1%;
+    width: .7em;
+    height: auto;
+    margin: auto;
+    transition: all .5s ease;
+}
+.todo:hover .removeTodoBtn{
+    opacity: 1;
 }
