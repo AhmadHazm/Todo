@@ -70,4 +70,33 @@ function clearCompleted(){
     })
 }
 
-function filter(filter){}
+// filter
+function filter(filter){
+    let checkBox = document.querySelectorAll(".todoCheckbox")
+
+    if(filter == "completed"){
+        checkBox.forEach(e=>{
+            if(e.checked){
+                e.parentElement.style.display = ""
+            } else{
+                e.parentElement.style.display = "none"
+            }
+        })
+    }
+
+    else if(filter == "active"){
+        checkBox.forEach(e=>{
+            if(e.checked){
+                e.parentElement.style.display = "none"
+            } else{
+                e.parentElement.style.display = ""
+            }
+        })
+    }
+ 
+    else{
+        checkBox.forEach(e=>{
+                e.parentElement.style.display = ""
+        })
+    }
+}
