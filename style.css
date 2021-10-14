@@ -140,3 +140,8 @@ main{
         padding-top: 2em;
     }
 }
+@media (max-width: 1000px) {
+    .removeTodoBtn{
+        opacity: 1;
+    }
+}
