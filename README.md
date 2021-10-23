@@ -1,7 +1,5 @@
 ## Todo App
 ### what I want to learn :
-* How to make a good looking project without some one desing it.
-
 * improve my `JS` by making the backgournd.
 
 * Learn how to work with `Markdown` to make theis README.
